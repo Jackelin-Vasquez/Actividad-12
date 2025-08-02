@@ -14,8 +14,8 @@ else:
 
             for notas_estudiantes in range(cantidad_notas):
                 try:
-                    print(f"Nota{notas_estudiantes +1}")
-                    nota= int(input(f"Ingrese nota {notas_estudiantes+1}"))
+                    print(f"Nota{notas_estudiantes +1}:")
+                    nota= int(input(f"Ingrese nota {notas_estudiantes+1}:"))
                 except ValueError:
                     print("Error: Ingrese datos validos..")
                 else:
