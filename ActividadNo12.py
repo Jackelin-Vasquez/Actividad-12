@@ -5,12 +5,12 @@ try:
     cantidad_estudiantes= int(input("Ingrese cantidad de estudiantes a ingresar:"))
 except ValueError:
     print("Error: Ingrese números validos...")
-
-for i in range(cantidad_estudiantes):
-    try:
-        nombre= input("ingrese nombre de estudiante:").lower()
-    except ValueError:
-        print("Error: deben ser valores validos.")
+else:
+    for i in range(cantidad_estudiantes):
+        try:
+            nombre= input("ingrese nombre de estudiante:").lower()
+        except ValueError:
+            print("Error: deben ser valores validos.")
 
         cantidad_notas= int(input("Ingrese cantidad de notas:"))
     except ValueError:
