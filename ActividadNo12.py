@@ -1,4 +1,5 @@
 notas_1= []
+estudiantes=[]
 notas=0
 try:
     cantidad_estudiantes= int(input("Ingrese cantidad de estudiantes a ingresar:"))
@@ -15,12 +16,14 @@ for i in range(cantidad_estudiantes):
     except ValueError:
         print("Error: Deben ser numeros validos.")
 
-    for notas in range(cantidad_notas):
-        print(f"Nota{notas +1}")
-        nota= int(input(f"Ingrese nota {notas+1}"))
-        notas_1.append(nota)
-        nota += notas
+        for notas_estudiantes in range(cantidad_notas):
+            print(f"Nota{notas_estudiantes +1}")
+            nota= int(input(f"Ingrese nota {notas_estudiantes+1}"))
+            notas_1.append(nota)
+            nota += notas
 
         promedio = notas/len(notas)
+        estudiantes.append([nombre,promedio])
 
-print(f"{nombre} tiene un promedio de {promedio}")
+    for student in estudiantes:
+        print(f"{student[0]} tiene el promedio de {student[1]}")
